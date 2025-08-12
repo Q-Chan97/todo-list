@@ -19,7 +19,32 @@ body {
 
 #side-bar {
     grid-column: 1 / 2;
+    display: grid;
+    grid-template-rows: 1fr 5fr;
     border: 1px solid red /* Guideline */
+}
+
+#side-head {
+    grid-row: 1 / 2;
+    display: flex;
+    gap: 20px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+#main-img {
+    width: 60px;
+    height: 60px;
+}
+
+#side-body {
+    grid-row: 2 / 5;
+    border: 1px solid orange; /* Guideline */
+}
+
+#side-body > h2 {
+    color: white;
 }
 
 #main-content {
