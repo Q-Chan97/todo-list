@@ -12,7 +12,17 @@ body {
 
 #page-grid-div {
     display: grid;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: 100vh;
     grid-template-columns: 1fr 4fr;
     border: 1px solid blue; /* Guideline */
+}
+
+#side-bar {
+    grid-column: 1 / 2;
+    border: 1px solid red /* Guideline */
+}
+
+#main-content {
+    grid-column: 2 / 4;
+    border: 1px solid yellow; /* Guideline */
 }
