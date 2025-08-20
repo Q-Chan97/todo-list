@@ -7,3 +7,9 @@ class Tasks {
         this.notes = notes;
     }
 }
+
+export function createTasks(title, description, dueDate, priority, notes) {
+    let task = new Tasks(title, description, dueDate, priority, notes);
+
+    return task;
+}
