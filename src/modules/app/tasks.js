@@ -13,5 +13,3 @@ export function createTasks(title, description, dueDate, priority, notes) {
 
     return task;
 }
-
-console.log(createTasks("New Task", "Description Here", "Now", "High", "No notes Here"));
