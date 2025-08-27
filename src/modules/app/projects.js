@@ -1,3 +1,5 @@
+const projectArray = [];
+
 class Project {
 
     static Id = 1;
@@ -15,11 +17,11 @@ class Project {
 export function createProject(name) {
     const project = new Project(name);
 
+    projectArray.push(project);
+
+    localStorage.setItem("projects", JSON.stringify(projectArray))
+
     return project;
 }
 
-let test = createProject("Test");
-console.log(test);
-test.addTasks("testTask")
-console.log(test.items);
-console.log(test);
+createProject("testProject")
