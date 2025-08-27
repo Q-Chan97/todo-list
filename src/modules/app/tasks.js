@@ -1,3 +1,5 @@
+const taskArray = [];
+
 class Tasks {
     constructor(title, description, dueDate, priority, notes) {
         this.title = title;
@@ -11,5 +13,10 @@ class Tasks {
 export function createTasks(title, description, dueDate, priority, notes) {
     let task = new Tasks(title, description, dueDate, priority, notes);
 
+    taskArray.push(task);
+
+    localStorage.setItem("tasks", JSON.stringify(taskArray))
     return task;
 }
+
+createTasks("test", "testDesc", "Now", "High", "None");
