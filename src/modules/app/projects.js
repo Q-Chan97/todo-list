@@ -25,7 +25,7 @@ export function createProject(name) {
 }
 
 export function findProject(projectId, task) {
-    const project = projectArray.find(project => project.id === projectId); // Finds a matching id in project array
+    const project = projectArray.find(project => project.id === Number(projectId)); // Finds a matching id in project array, changes from a string to a number
 
     if (project) { // If project exists, add it to project items
         project.addTasks(task);
