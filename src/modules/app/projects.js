@@ -1,4 +1,4 @@
-const projectArray = [];
+export const projectArray = [];
 
 class Project {
 
