@@ -1,3 +1,5 @@
+import { findProject } from "./projects";
+
 const taskArray = [];
 
 class Tasks {
@@ -14,10 +16,13 @@ class Tasks {
 export function createTasks(title, description, dueDate, priority, notes, projectId) {
     let task = new Tasks(title, description, dueDate, priority, notes, projectId);
 
+    findProject(projectId, task);
+
     taskArray.push(task);
 
     localStorage.setItem("tasks", JSON.stringify(taskArray))
     return task;
 }
 
-createTasks("test", "testDesc", "Now", "High", "None");
+let test1 = createTasks("test", "testDesc", "Now", "High", "None", "1");
+let test2 = createTasks("test2", "testDesc2", "Later", "Low", "Check with Sandy", "2")
