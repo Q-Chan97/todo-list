@@ -3,12 +3,16 @@ import { findProject } from "./projects";
 const taskArray = [];
 
 class Tasks {
+
+    static Id = 1;
+
     constructor(title, description, dueDate, priority, notes, projectId) {
         this.title = title;
         this.description = description;
         this.dueDate = dueDate;
         this.priority = priority;
         this.notes = notes;
+        this.id = Tasks.Id++;
         this.projectId = projectId;
     }
 }
