@@ -5,7 +5,7 @@ class Project {
     static Id = 1;
     constructor(name) {
         this.items = [] // Array to store tasks
-        this.projectId = Project.Id++; // Every project gets an ID
+        this.id = Project.Id++; // Every project gets an ID
         this.name = name;
     }
 
@@ -30,6 +30,9 @@ export function findProject(projectId, task) {
     if (project) { // If project exists, add it to project items
         project.addTasks(task);
     }
+
+    localStorage.setItem("projects", JSON.stringify(projectArray)); // Update local storage
 }
 
 createProject("testProject")
+createProject("testProject2")
