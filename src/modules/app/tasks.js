@@ -1,6 +1,6 @@
 import { findProject } from "./projects";
 
-const taskArray = [];
+export const taskArray = [];
 
 class Tasks {
 
