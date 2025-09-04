@@ -55,5 +55,66 @@ body {
 
 #main-content {
     grid-column: 2 / 4;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    background-color: rgb(63, 63, 63);
     border: 1px solid yellow; /* Guideline */
+}
+
+.task-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.project-name {
+    color: white;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.task-container {
+    display: flex;
+    align-items: center;
+    color: white;
+    background-color:rgb(35, 35, 35);
+    border: 2px solid rgb(18, 18, 18);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.task-info {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 5px;
+}
+
+.task-name {
+    grid-column: 1 / 4;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.task-priority {
+    display: flex;
+    justify-content: center;
+    width: 70px;
+}
+
+.high {
+    background-color: rgb(255, 89, 89);
+}
+
+.medium {
+    background-color: rgb(244, 207, 86);
+}
+
+.low {
+    background-color: rgb(99, 184, 99);
+}
+
+.task-notes {
+    grid-column: 1 / 2;
 }
