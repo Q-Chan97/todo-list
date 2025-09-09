@@ -34,5 +34,7 @@ export function findProject(projectId, task) {
     localStorage.setItem("projects", JSON.stringify(projectArray)); // Update local storage
 }
 
-createProject("testProject")
-createProject("testProject2")
+let testProject = createProject("testProject")
+let testProject2 = createProject("testProject2")
+
+export { testProject, testProject2 };
