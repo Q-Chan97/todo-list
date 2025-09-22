@@ -1,12 +1,12 @@
 import { projectArray } from "../app/projects";
-import { taskArray } from "../app/tasks";
+import { taskArray, test2 } from "../app/tasks";
 import { test1 } from "../app/tasks";
 import { testProject } from "../app/projects";
 
-const mainContent = document.querySelector("#main-content");
+const projectDiv = document.querySelector("#project-div");
 const wrapper = document.createElement("div");
 wrapper.classList.add("task-wrapper");
-mainContent.appendChild(wrapper);
+projectDiv.appendChild(wrapper);
 
 export function showTask(task) {
     const taskContainer = document.createElement("div");
@@ -50,3 +50,4 @@ export function showProject(project) {
 
 showProject(testProject); // Testing purposes
 showTask(test1);
+showTask(test2);
