@@ -23,5 +23,17 @@
             <button id="todo-button">Add Todo</button>
         </div>
     </div>
+    <!-- Project Modal -->
+    <dialog id="new-project-modal" open>
+        <form id="project-form">
+            <div id="project-modal-header">New Project</div>
+            <div id="new-project-name-section">
+                <label for="new-project-name">Name:</label>
+                <input type="text" id="new-project-name" name="new-project-name" minlength="1" maxlength="20">
+            </div>
+            <button type="submit" id="create-project-button">Create Project</button>
+            <button type="button" id="cancel-project-button">Cancel</button>
+        </form>
+    </dialog>
 </body>
 </html>
