@@ -145,7 +145,7 @@ button:hover {
 /* Project Modal */
 
 #new-project-modal {
-    height: 150px;
+    height: 175px;
     width: 400px;
     border: none;
     border-radius: 10px;
@@ -181,6 +181,7 @@ button:hover {
     border-bottom: 1px solid gray;
     width: 250px;
     font-size: 1.2rem;
+    margin-bottom: 5px;
 }
 
 #new-project-name-section input:focus {
