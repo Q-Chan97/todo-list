@@ -27,8 +27,3 @@ export function createTasks(title, description, dueDate, priority, notes, projec
     localStorage.setItem("tasks", JSON.stringify(taskArray))
     return task;
 }
-
-let test1 = createTasks("test", "testDesc", "Now", "High", "None", "1");
-let test2 = createTasks("test2", "testDesc2", "Later", "Low", "Check with Sandy", "2")
-
-export { test1, test2 };
