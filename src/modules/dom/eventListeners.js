@@ -30,7 +30,13 @@ export function addProject() {
         const newProject = createProject(projectName);
 
         createProject(newProject);
+        closeDialog(projectModal);
+        resetForm();
     })
+}
+
+export function resetForm() {
+    projectInput.value = "";
 }
 
 export function closeDialog(element) {
