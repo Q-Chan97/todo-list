@@ -26,13 +26,41 @@
     <!-- Project Modal -->
     <dialog id="new-project-modal">
         <form method="dialog" id="project-form">
-            <div id="project-modal-header">New Project</div>
+            <div id="project-modal-header" class="modal-header">New Project</div>
             <div id="new-project-name-section">
                 <label for="new-project-name">Name:</label>
                 <input type="text" id="new-project-name" name="new-project-name" minlength="1" maxlength="20">
             </div>
             <button type="submit" id="create-project-button">Create Project</button>
             <button type="button" id="cancel-project-button" class="cancel-button">Cancel</button>
+        </form>
+    </dialog>
+    <!-- Todo Modal -->
+    <dialog id="new-todo-modal">
+        <form method="dialog" id="todo-form">
+            <div id="todo-modal-header" class="modal-header">Add Todo</div>
+            <div id="todo-name-section">
+                <label for="todo-name">Name</label>
+                <input type="text" id="todo-name" name="todo-name" minlength="1" maxlength="20">
+            </div>
+            <div id="todo-desc-section">
+                <label for="todo-desc">Description</label>
+                <textarea id="todo-desc" name="todo-desc" minlength="1" maxlength="200"></textarea>
+            </div>
+            <div id="todo-inputs">
+                <input type="date" id="todo-date" name="todo-date">
+
+                <select id="todo-priority" name="todo-priority">
+                    <option value="" selected disabled>Priority</option>
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+
+                <select id="chooseProjectList" name="chooseProjectList">
+                    <option value="" selected disabled>Choose Project</option>
+                </select>
+            </div>
         </form>
     </dialog>
 </body>
