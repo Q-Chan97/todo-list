@@ -1,7 +1,5 @@
 import { projectArray } from "../app/projects";
-import { taskArray, test2 } from "../app/tasks";
-import { test1 } from "../app/tasks";
-import { testProject } from "../app/projects";
+import { taskArray } from "../app/tasks";
 
 const projectDiv = document.querySelector("#project-div");
 const wrapper = document.createElement("div");
@@ -47,7 +45,3 @@ export function showProject(project) {
 
     wrapper.appendChild(projectName);
 }
-
-showProject(testProject); // Testing purposes
-showTask(test1);
-showTask(test2);
