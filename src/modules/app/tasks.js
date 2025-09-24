@@ -6,19 +6,18 @@ class Tasks {
 
     static Id = 1;
 
-    constructor(title, description, dueDate, priority, notes, projectId) {
+    constructor(title, description, dueDate, priority, projectId) {
         this.title = title;
         this.description = description;
         this.dueDate = dueDate;
         this.priority = priority;
-        this.notes = notes;
         this.id = Tasks.Id++;
         this.projectId = projectId;
     }
 }
 
-export function createTasks(title, description, dueDate, priority, notes, projectId) {
-    let task = new Tasks(title, description, dueDate, priority, notes, projectId);
+export function createTasks(title, description, dueDate, priority, projectId) {
+    let task = new Tasks(title, description, dueDate, priority, projectId);
 
     findProject(projectId, task);
 
