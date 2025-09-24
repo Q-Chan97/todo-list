@@ -2,10 +2,22 @@
 
 import { createProject } from "../app/projects";
 
+// Project Interactive Elements //
+
 const newProjectButton = document.getElementById("new-project-button");
 const projectModal = document.getElementById("new-project-modal");
 const projectInput = document.getElementById("new-project-name");
 const createProjBtn = document.getElementById("create-project-button");
+
+// Todo Interactive Elements //
+
+const newTodoButton = document.getElementById("todo-button");
+const todoName = document.getElementById("todo-name");
+const todoDesc = document.getElementById("todo-desc");
+const todoDate = document.getElementById("todo-date");
+const todoPriority = document.getElementById("todo-priority");
+const chooseProjectList = document.getElementById("chooseProjectList");
+
 
 // Modals //
 
