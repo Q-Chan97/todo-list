@@ -12,6 +12,7 @@ const createProjBtn = document.getElementById("create-project-button");
 // Todo Interactive Elements //
 
 const newTodoButton = document.getElementById("todo-button");
+const todoModal = document.getElementById("new-todo-modal");
 const todoName = document.getElementById("todo-name");
 const todoDesc = document.getElementById("todo-desc");
 const todoDate = document.getElementById("todo-date");
@@ -25,11 +26,20 @@ export function showDialog(type) {
     if (type === "project") {
         projectModal.showModal();
     }
+    else if (type === "todo") {
+        todoModal.showModal();
+    }
 }
 
 export function showProjectModal() {
     newProjectButton.addEventListener("click", () => {
         showDialog("project");
+    })
+}
+
+export function showTodoModal() {
+    newTodoButton.addEventListener("click", () => {
+        showDialog("todo");
     })
 }
 
