@@ -68,9 +68,10 @@ export function closeDialog(element) {
 export function closeDialogAction() {
     const cancelBtn = document.querySelectorAll("button.cancel-button");
 
-    cancelBtn.forEach((btn) => {
+    cancelBtn.forEach((btn) => { // Works for both project and todo modals
         btn.addEventListener("click", () => {
             closeDialog(projectModal);
+            closeDialog(todoModal);
         })
     })
 }
