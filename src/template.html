@@ -36,7 +36,7 @@
         </form>
     </dialog>
     <!-- Todo Modal -->
-    <dialog id="new-todo-modal">
+    <dialog id="new-todo-modal" open>
         <form method="dialog" id="todo-form">
             <div id="todo-modal-header" class="modal-header">Add Todo</div>
             <div id="todo-name-section">
@@ -60,6 +60,10 @@
                 <select id="chooseProjectList" name="chooseProjectList">
                     <option value="" selected disabled>Choose Project</option>
                 </select>
+            </div>
+            <div id="todo-modal-buttons">
+                <button id="create-todo-button">Create Todo</button>
+                <button id="cancel-todo-button" class="cancel-button">Cancel</button>
             </div>
         </form>
     </dialog>
