@@ -6,6 +6,7 @@ export function renderSidebarProjects() {
     projectArray.forEach((project) => {
       const btn = document.createElement("button");
       btn.textContent = project.name;
+      btn.classList.add("sidebar-project-btn");
 
       btn.dataset.projectId = project.id; // Sets HTML dataset id to equal project Id
 
