@@ -1,6 +1,7 @@
 // Event Listeners Module
 
 import { createProject } from "../app/projects";
+import { renderSidebarProjects } from "./projectRender";
 
 // Project Interactive Elements //
 
@@ -44,6 +45,8 @@ export function showTodoModal() {
 }
 
 export function addProject() {
+    const projectListSection = document.getElementById("project-list-section");
+
     createProjBtn.addEventListener("click", (e) => {
         e.preventDefault();
 
@@ -54,6 +57,8 @@ export function addProject() {
         createProject(projectName);
         closeDialog(projectModal);
         resetForm();
+        projectListSection.innerHTML = ""; // Clears sidebar, stops repeat project buttons
+        renderSidebarProjects(); // Shows project button after creation
     })
 }
 
