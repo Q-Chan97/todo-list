@@ -1,6 +1,6 @@
 import { findProject } from "./projects";
 
-export const taskArray = [];
+export const taskArray = JSON.parse(localStorage.getItem("tasks")) || []; // If tasks don't exist, it's an empty array
 
 class Tasks {
 

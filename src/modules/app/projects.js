@@ -1,4 +1,4 @@
-export const projectArray = [];
+export const projectArray = JSON.parse(localStorage.getItem("projects")) || []; // If projects don't exist, then it's an empty array
 
 class Project {
 
