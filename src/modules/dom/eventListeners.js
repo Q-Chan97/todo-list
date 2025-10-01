@@ -47,11 +47,11 @@ export function addProject() {
     createProjBtn.addEventListener("click", (e) => {
         e.preventDefault();
 
-        const projectName = projectInput.value;
+        const projectName = projectInput.value.trim();
 
-        const newProject = createProject(projectName);
+        if (!projectName) return; // Cancels if no value is present for project
 
-        createProject(newProject);
+        createProject(projectName);
         closeDialog(projectModal);
         resetForm();
     })
