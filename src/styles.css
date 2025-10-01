@@ -75,8 +75,24 @@ button {
 }
 
 button:hover {
-    filter: brightness(110%);
+    filter: brightness(115%);
     cursor: pointer;
+}
+
+#project-list-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button.sidebar-project-btn {
+    width: 210px;
+    height: 50px;
+    color: white;
+    background-color: rgb(37, 37, 37);
+    border: 1px solid rgb(84, 106, 245);
+    border-radius: 15px;
 }
 
 #todo-button {
