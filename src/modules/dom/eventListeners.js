@@ -1,7 +1,7 @@
 // Event Listeners Module
 
 import { createProject } from "../app/projects";
-import { renderSidebarProjects } from "./projectRender";
+import { renderSidebarProjects, renderProjectSelect } from "./projectRender";
 
 // Project Interactive Elements //
 
@@ -41,6 +41,7 @@ export function showProjectModal() {
 export function showTodoModal() {
     newTodoButton.addEventListener("click", () => {
         showDialog("todo");
+        renderProjectSelect(); // Refresh select dropdown on modal open
     })
 }
 
