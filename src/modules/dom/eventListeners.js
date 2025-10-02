@@ -1,6 +1,7 @@
 // Event Listeners Module
 
 import { createProject } from "../app/projects";
+import { createTasks } from "../app/tasks";
 import { renderSidebarProjects, renderProjectSelect } from "./projectRender";
 
 // Project Interactive Elements //
@@ -18,7 +19,7 @@ const todoName = document.getElementById("todo-name");
 const todoDesc = document.getElementById("todo-desc");
 const todoDate = document.getElementById("todo-date");
 const todoPriority = document.getElementById("todo-priority");
-const chooseProjectList = document.getElementById("chooseProjectList");
+const todoProject = document.getElementById("choose-project-list");
 
 
 // Modals //
@@ -79,5 +80,24 @@ export function closeDialogAction() {
             closeDialog(projectModal);
             closeDialog(todoModal);
         })
+    })
+}
+
+export function addTodo() {
+    const createTodoBtn = document.getElementById("create-todo-button");
+
+    createTodoBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        const todoNameValue = todoName.value.trim();
+        const todoDescValue = todoDesc.value.trim();
+        const todoDateValue = todoDate.value;
+        const todoPriorityValue = todoPriority.value;
+        const todoProjectValue = todoProject.value;
+
+        createTasks(todoNameValue, todoDescValue, todoDateValue, todoPriorityValue, todoProjectValue);
+
+        closeDialog(todoModal);
+        resetForm();
     })
 }
