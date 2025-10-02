@@ -2,7 +2,7 @@
 
 import { showProjectModal, closeDialogAction, addProject, showTodoModal } from "../dom/eventListeners"
 
-import { renderSidebarProjects } from "../dom/projectRender";
+import { renderSidebarProjects, renderProjectSelect } from "../dom/projectRender";
 
 export function initializeApp() {
     showProjectModal();
@@ -14,4 +14,6 @@ export function initializeApp() {
     addProject();
 
     renderSidebarProjects();
+
+    renderProjectSelect();
 }
