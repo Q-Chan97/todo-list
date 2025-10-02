@@ -8,10 +8,6 @@ class Project {
         this.id = Project.Id++; // Every project gets an ID
         this.name = name;
     }
-
-    addTasks(task) {
-        this.items.push(task);
-    }
 }
 
 export function createProject(name) {
@@ -28,7 +24,7 @@ export function findProject(projectId, task) {
     const project = projectArray.find(project => project.id === Number(projectId)); // Finds a matching id in project array, changes from a string to a number
 
     if (project) { // If project exists, add it to project items
-        project.addTasks(task);
+        project.items.push(task);
     }
 
     localStorage.setItem("projects", JSON.stringify(projectArray)); // Update local storage
