@@ -66,6 +66,11 @@ export function addProject() {
 
 export function resetForm() {
     projectInput.value = "";
+    todoName.value = "";
+    todoDesc.value = "";
+    todoDate.value = "";
+    todoPriority.value = "";
+    todoProject.value = "";
 }
 
 export function closeDialog(element) {
