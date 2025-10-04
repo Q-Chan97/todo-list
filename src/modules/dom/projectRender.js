@@ -1,4 +1,5 @@
 import { projectArray } from "../app/projects";
+import { showProject } from "../dom/dom";
 
 // Sidebar project list render
 
@@ -37,4 +38,15 @@ export function renderProjectSelect() {
 
         projectList.appendChild(option);
     })
+}
+
+// Render project on screen
+
+export function renderProjectOnScreen(projectId) {
+    // Find matching project id, makes project id (a number) a string so it can be matched to dataset Id (a string)
+    const projectToRender = projectArray.find(proj => proj.id.toString() === projectId);
+
+    if (!projectToRender) return;
+
+    showProject(projectToRender);
 }
