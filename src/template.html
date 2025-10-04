@@ -30,7 +30,7 @@
             <div id="project-modal-header" class="modal-header">New Project</div>
             <div id="new-project-name-section">
                 <label for="new-project-name">Name:</label>
-                <input type="text" id="new-project-name" name="new-project-name" minlength="1" maxlength="20">
+                <input type="text" id="new-project-name" name="new-project-name" minlength="1" maxlength="20" required>
             </div>
             <button type="submit" id="create-project-button">Create Project</button>
             <button type="button" id="cancel-project-button" class="cancel-button">Cancel</button>
@@ -42,23 +42,23 @@
             <div id="todo-modal-header" class="modal-header">Add Todo</div>
             <div id="todo-name-section">
                 <label for="todo-name">Name</label>
-                <input type="text" id="todo-name" name="todo-name" minlength="1" maxlength="20">
+                <input type="text" id="todo-name" name="todo-name" minlength="1" maxlength="20" required>
             </div>
             <div id="todo-desc-section">
                 <label for="todo-desc">Description</label>
-                <textarea id="todo-desc" name="todo-desc" minlength="1" maxlength="200"></textarea>
+                <textarea id="todo-desc" name="todo-desc" minlength="1" maxlength="200" required></textarea>
             </div>
             <div id="todo-inputs">
-                <input type="date" id="todo-date" name="todo-date">
+                <input type="date" id="todo-date" name="todo-date" required>
 
-                <select id="todo-priority" name="todo-priority">
+                <select id="todo-priority" name="todo-priority" required>
                     <option value="" selected disabled>Priority</option>
                     <option value="low">Low</option>
                     <option value="medium">Medium</option>
                     <option value="high">High</option>
                 </select>
 
-                <select id="choose-project-list" name="choose-project-list"></select>
+                <select id="choose-project-list" name="choose-project-list" required></select>
             </div>
             <div id="todo-modal-buttons">
                 <button type="submit" id="create-todo-button">Create Todo</button>
