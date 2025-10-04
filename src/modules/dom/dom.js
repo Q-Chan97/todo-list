@@ -1,6 +1,3 @@
-import { projectArray } from "../app/projects";
-import { taskArray } from "../app/tasks";
-
 const projectDiv = document.querySelector("#project-div");
 const wrapper = document.createElement("div");
 wrapper.classList.add("task-wrapper");
@@ -37,11 +34,13 @@ export function showTask(task) {
 }
 
 export function showProject(project) {
-    const projectName = document.createElement("div");
-    
+    wrapper.innerHTML = ""; // Clears wrapper so projects don't stack
+
+    const projectName = document.createElement("div"); // Render project name
     projectName.classList.add("project-name");
-
     projectName.textContent = project.name;
-
     wrapper.appendChild(projectName);
+
+
+    project.items.forEach((task) => showTask(task)); 
 }
