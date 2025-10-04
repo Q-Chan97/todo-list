@@ -2,7 +2,7 @@
 
 import { createProject } from "../app/projects";
 import { createTasks } from "../app/tasks";
-import { renderSidebarProjects, renderProjectSelect } from "./projectRender";
+import { renderSidebarProjects, renderProjectSelect, renderProjectOnScreen } from "./projectRender";
 
 // Project Interactive Elements //
 
@@ -10,6 +10,8 @@ const newProjectButton = document.getElementById("new-project-button");
 const projectModal = document.getElementById("new-project-modal");
 const projectInput = document.getElementById("new-project-name");
 const createProjBtn = document.getElementById("create-project-button");
+const projectListSection = document.getElementById("project-list-section");
+
 
 // Todo Interactive Elements //
 
@@ -47,8 +49,6 @@ export function showTodoModal() {
 }
 
 export function addProject() {
-    const projectListSection = document.getElementById("project-list-section");
-
     createProjBtn.addEventListener("click", (e) => {
         e.preventDefault();
 
@@ -104,5 +104,17 @@ export function addTodo() {
 
         closeDialog(todoModal);
         resetForm();
+    })
+}
+
+// Buttons
+
+export function projectClick() {
+    projectListSection.addEventListener("click", (e) => {
+        const btn = e.target.closest("button[data-project-id]");
+        if (!btn) return;
+        const projectId = btn.dataset.projectId;
+
+        renderProjectOnScreen(projectId);
     })
 }
