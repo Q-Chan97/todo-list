@@ -115,6 +115,13 @@ export function projectClick() {
         if (!btn) return;
         const projectId = btn.dataset.projectId;
 
+        const selectedProject = document.querySelectorAll(".selected-project-button"); // Removes class from all buttons in div
+        selectedProject.forEach((button) => {
+            button.classList.remove("selected-project-button");
+        })
+
+        btn.classList.add("selected-project-button"); // Adds class to most recently selected project button
+
         renderProjectOnScreen(projectId);
     })
 }
