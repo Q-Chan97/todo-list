@@ -98,6 +98,7 @@ button.sidebar-project-btn {
 
 button.selected-project-button {
     border: 3px solid rgb(255, 189, 46);
+    font-weight: 700;
 }
 
 #todo-button {
