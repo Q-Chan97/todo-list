@@ -29,3 +29,11 @@ export function findProject(projectId, task) {
 
     localStorage.setItem("projects", JSON.stringify(projectArray)); // Update local storage
 }
+
+export function setActiveProject(projectId) { // Functions to get and set the currently selected project in local storage
+    localStorage.setItem("activeProject", JSON.stringify(projectId));
+}
+
+export function getActiveProject() {
+    return JSON.parse(localStorage.getItem("activeProject"));
+}
