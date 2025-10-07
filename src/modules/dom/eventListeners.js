@@ -1,6 +1,6 @@
 // Event Listeners Module
 
-import { createProject } from "../app/projects";
+import { createProject, setActiveProject, getActiveProject } from "../app/projects";
 import { createTasks } from "../app/tasks";
 import { renderSidebarProjects, renderProjectSelect, renderProjectOnScreen } from "./projectRender";
 
@@ -104,6 +104,12 @@ export function addTodo() {
 
         closeDialog(todoModal);
         resetForm();
+
+        let activeProject = getActiveProject();
+        if (activeProject === todoProjectValue) { // If selected project = targeted project, render on screen
+            renderProjectOnScreen(activeProject);
+        }
+
     })
 }
 
@@ -123,5 +129,6 @@ export function projectClick() {
         btn.classList.add("selected-project-button"); // Adds class to most recently selected project button
 
         renderProjectOnScreen(projectId);
+        setActiveProject(projectId); // Sets active project in local storage
     })
 }
