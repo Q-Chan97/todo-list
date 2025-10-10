@@ -1,6 +1,6 @@
 // Event Listeners Module
 
-import { createProject, setActiveProject, getActiveProject } from "../app/projects";
+import { createProject, deleteProject, setActiveProject, getActiveProject, removeActiveProject } from "../app/projects";
 import { createTasks } from "../app/tasks";
 import { renderSidebarProjects, renderProjectSelect, renderProjectOnScreen } from "./projectRender";
 
@@ -130,5 +130,25 @@ export function projectClick() {
 
         renderProjectOnScreen(projectId);
         setActiveProject(projectId); // Sets active project in local storage
+    })
+}
+
+export function deleteProjectEvent() {
+    projectListSection.addEventListener("click", (e) => {
+       const deleteButton = e.target.closest(".proj-delete-button");
+       if (!deleteButton) return;
+       
+       deleteProject(deleteButton);
+
+       projectListSection.innerHTML = "";
+
+       renderSidebarProjects();
+
+       const activeProject = getActiveProject();
+       const deletedId = deleteButton.dataset.projectId;
+
+       if (activeProject && activeProject === deletedId) {
+        removeActiveProject();
+       }
     })
 }
