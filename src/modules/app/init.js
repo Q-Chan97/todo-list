@@ -1,6 +1,6 @@
 // Imports necessary functions to run the app
 
-import { showProjectModal, closeDialogAction, addProject, showTodoModal, addTodo, projectClick } from "../dom/eventListeners"
+import { showProjectModal, closeDialogAction, addProject, showTodoModal, addTodo, projectClick, deleteProjectEvent } from "../dom/eventListeners"
 
 import { renderSidebarProjects, renderProjectSelect } from "../dom/projectRender";
 
@@ -20,4 +20,6 @@ export function initializeApp() {
     renderProjectSelect();
 
     projectClick();
+
+    deleteProjectEvent();
 }
