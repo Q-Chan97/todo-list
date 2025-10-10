@@ -7,13 +7,21 @@ export function renderSidebarProjects() {
     const projectListSection = document.getElementById("project-list-section");
 
     projectArray.forEach((project) => {
+      const projWrapper = document.createElement("div");
+      projWrapper.classList.add("project-wrapper");
+
       const btn = document.createElement("button");
       btn.textContent = project.name;
       btn.classList.add("sidebar-project-btn");
-
       btn.dataset.projectId = project.id; // Sets HTML dataset id to equal project Id
 
-      projectListSection.appendChild(btn);
+      projectListSection.appendChild(projWrapper);
+      projWrapper.appendChild(btn);
+
+      const deleteButton = document.createElement("button");
+      deleteButton.classList.add("proj-delete-button");
+      deleteButton.dataset.projectId = project.id;
+      projWrapper.appendChild(deleteButton);
     })
 }
 
