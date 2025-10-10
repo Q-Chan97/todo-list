@@ -30,10 +30,23 @@ export function findProject(projectId, task) {
     localStorage.setItem("projects", JSON.stringify(projectArray)); // Update local storage
 }
 
+export function deleteProject(item) {
+    const projectId = item.dataset.projectId;
+    const projectIndex = projectArray.findIndex(proj => proj.id.toString() === projectId.toString());
+    if (projectIndex === -1) return;
+
+    projectArray.splice(projectIndex, 1);
+    localStorage.setItem("projects", JSON.stringify(projectArray));
+}
+
 export function setActiveProject(projectId) { // Functions to get and set the currently selected project in local storage
     localStorage.setItem("activeProject", JSON.stringify(projectId));
 }
 
 export function getActiveProject() {
     return JSON.parse(localStorage.getItem("activeProject"));
+}
+
+export function removeActiveProject() {
+    localStorage.removeItem("activeProject");
 }
